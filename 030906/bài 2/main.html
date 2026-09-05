@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .may-tinh {
+      background-color: #1c1c2e;
+      padding: 20px;
+      border-radius: 10px;
+      width: 260px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    #manHinh {
+      background-color: #1c2833;
+      color: white;
+      font-size: 28px;
+      text-align: right;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ban-phim {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #3d3d5c;
+      color: white;
+      transition: transform 0.1s, filter 0.1s;
+    }
+    button:active {
+      transform: scale(0.92);
+      filter: brightness(1.2);
+    }
+    .so {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+    }
+    .phep-tinh {
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+    }
+    .bang {
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+    }
+    .xoa {
+      grid-column: span 4;
+      background: linear-gradient(135deg, #f857a6, #ff5858);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="may-tinh">
+    <div id="manHinh">0</div>
+    <div class="ban-phim">
+      <button class="so" data-value="7">7</button>
+      <button class="so" data-value="8">8</button>
+      <button class="so" data-value="9">9</button>
+      <button class="phep-tinh" data-value="/">/</button>
+
+      <button class="so" data-value="4">4</button>
+      <button class="so" data-value="5">5</button>
+      <button class="so" data-value="6">6</button>
+      <button class="phep-tinh" data-value="*">*</button>
+
+      <button class="so" data-value="1">1</button>
+      <button class="so" data-value="2">2</button>
+      <button class="so" data-value="3">3</button>
+      <button class="phep-tinh" data-value="-">-</button>
+
+      <button class="so" data-value="0">0</button>
+      <button class="so" data-value=".">.</button>
+      <button class="bang" data-value="=">=</button>
+      <button class="phep-tinh" data-value="+">+</button>
+
+      <button class="xoa" data-value="clear">Clear</button>
+    </div>
+
+  </div>
+
+  <script src="script2.js"></script>
+
+</body>
+</html>
