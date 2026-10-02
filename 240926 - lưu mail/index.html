@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validate Form bằng JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <form id="myForm">
+      <!-- Họ tên -->
+      <div class="form-group">
+        <label for="fullname">Họ tên</label>
+        <input type="text" id="fullname" placeholder="Nhập họ tên">
+        <div class="error-message" id="fullname-error"></div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Nhập email">
+        <div class="error-message" id="email-error"></div>
+      </div>
+
+      <!-- SĐT -->
+      <div class="form-group">
+        <label for="phone">SĐT</label>
+        <input type="text" id="phone" placeholder="Nhập số điện thoại">
+        <div class="error-message" id="phone-error"></div>
+      </div>
+
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
