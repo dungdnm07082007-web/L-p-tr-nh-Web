@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Thư Viện</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 style="margin: 0;">📚 Quản Lý Thư Viện</h1>
+            <button id="theme-toggle" class="theme-btn">🌙 Chế độ Tối</button>
+        </header>
+        
+        <!-- Form Thêm Sách -->
+        <div class="card" style="margin-bottom: 24px;">
+            <h3>Thêm Sách Mới</h3>
+            <form id="book-form">
+                <div class="form-group">
+                    <label for="title">Tên sách:</label>
+                    <input type="text" id="title" placeholder="Nhập tên sách">
+                    <div class="error" id="err-title">Vui lòng nhập tên sách!</div>
+                </div>
+                <div class="form-group">
+                    <label for="author">Tác giả:</label>
+                    <input type="text" id="author" placeholder="Nhập tên tác giả">
+                    <div class="error" id="err-author">Vui lòng nhập tên tác giả!</div>
+                </div>
+                <div class="form-group">
+                    <label for="genre">Thể loại:</label>
+                    <select id="genre">
+                        <option value="">-- Chọn thể loại --</option>
+                        <option value="Tiểu thuyết">Tiểu thuyết</option>
+                        <option value="Khoa học">Khoa học</option>
+                        <option value="Kỹ năng">Kỹ năng</option>
+                        <option value="Lịch sử">Lịch sử</option>
+                        <option value="Tâm linh">Tâm linh</option>
+                    </select>
+                    <div class="error" id="err-genre">Vui lòng chọn thể loại!</div>
+                </div>
+                <button type="submit">Lưu Thông Tin</button>
+            </form>
+        </div>
+
+        <!-- Thanh Lọc & Tìm Kiếm -->
+        <div class="card filter-bar" style="margin-bottom: 24px;">
+            <div class="filter-group">
+                <label for="search-input">🔎 Tìm kiếm:</label>
+                <input type="text" id="search-input" placeholder="Tìm theo tên sách hoặc tác giả...">
+            </div>
+            <div class="filter-group">
+                <label for="filter-genre">🏷️ Lọc thể loại:</label>
+                <select id="filter-genre">
+                    <option value="Tất cả">Tất cả thể loại</option>
+                    <option value="Tiểu thuyết">Tiểu thuyết</option>
+                    <option value="Khoa học">Khoa học</option>
+                    <option value="Kỹ năng">Kỹ năng</option>
+                    <option value="Lịch sử">Lịch sử</option>
+                    <option value="Tâm linh">Tâm linh</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Danh Sách Sách -->
+        <h2>Danh Sách Sách</h2>
+        <div id="book-list" class="book-grid"></div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
